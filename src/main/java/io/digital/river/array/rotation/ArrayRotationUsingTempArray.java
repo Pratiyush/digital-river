@@ -66,7 +66,7 @@ public class ArrayRotationUsingTempArray {
         rotate(arrayToBeRotated, d, n);
     }
 
-    private static void rotate(final int[] arrayToBeRotated, final int d, final int n) {
+    public static void rotate(final int[] arrayToBeRotated, final int d, final int n) {
 
         // Current Value: {0,0,0,0,0,0,0}
         int rotatedArray[] = new int[n];

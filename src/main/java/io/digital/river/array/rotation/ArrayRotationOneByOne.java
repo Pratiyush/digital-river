@@ -55,7 +55,7 @@ public class ArrayRotationOneByOne {
         rotate(arrayToBeRotated, d, n);
     }
 
-    private static void rotate(final int[] arrayToBeRotated, final int d, final int n) {
+    public static void rotate(final int[] arrayToBeRotated, final int d, final int n) {
         for (int i = 0; i < d; i++) {
             int firstIndexData = arrayToBeRotated[0];
             for (int j = 0; j < n - 1; j++) {

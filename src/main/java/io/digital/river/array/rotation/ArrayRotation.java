@@ -15,7 +15,7 @@ public class ArrayRotation {
         rotate(arrayToBeRotated, rotateByElement, arrayLength);
     }
 
-    private static void rotate(
+    public static void rotate(
             final int[] arrayToBeRotated, final int rotateByElement, final int arrayLength) {
 
         int rotatedArray[] = new int[arrayLength];
