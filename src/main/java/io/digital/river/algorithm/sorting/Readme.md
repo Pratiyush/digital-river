@@ -12,7 +12,6 @@ And then we divide it by the total number of inputs.
 * Worst Time Complexity: Define the input for which algorithm takes a long time or maximum time. In the worst calculate the upper bound of an algorithm. Example: In the linear search when search data is present at the last location of large data then the worst case occurs.
 
 
-+----------------+-------------+-------------+--------------+----------+
 |  Bubble Sort   |    Ω(n)     |   θ(n^2)    |    O(n^2)    |   O(1)   |
 |----------------|-------------|-------------|--------------|----------|
 | Insertion Sort | Ω(n)        | θ(n^2)      | O(n^2)       | O(1)     |
@@ -26,7 +25,6 @@ And then we divide it by the total number of inputs.
 | Tim Sort       | Ω(n)        | θ(n log(n)) | O(n log (n)) | O(n)     |
 | Tree Sort      | Ω(n log(n)) | θ(n log(n)) | O(n^2)       | O(n)     |
 | Cube Sort      | Ω(n)        | θ(n log(n)) | O(n log(n))  | O(n)     |
-+----------------+-------------+-------------+--------------+----------+
 
 Ref: https://ozh.github.io/ascii-tables/
 
