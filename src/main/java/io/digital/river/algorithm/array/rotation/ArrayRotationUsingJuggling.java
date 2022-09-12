@@ -72,7 +72,7 @@ public class ArrayRotationUsingJuggling {
     private static final Logger LOGGER = LoggerFactory.getLogger(ArrayRotationUsingJuggling.class);
 
     public static void main(final String[] args) {
-        final int arr[] = {1, 2, 3, 4, 5, 6, 7,8,9,10,11,12,13};
+        final int arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13};
         final int d = 3;
         final int n = arr.length;
         rotate(arr, d, n);
@@ -81,33 +81,26 @@ public class ArrayRotationUsingJuggling {
     public static void rotate(final int[] arr, int d, final int n) {
         // Special Case: When d >= n
         d = d % n;
-        int gcd  =  getGreatestCommonDivisor(d,n);
+        int gcd = getGreatestCommonDivisor(d, n);
         for (int i = 0; i < gcd; i++) {
             int temp = arr[i];
             int j = i;
-            while(true){
-                int k  = j + d;
-                if (k >= n)
-                    k = k - n;
-                if (k == i)
-                    break;
+            while (true) {
+                int k = j + d;
+                if (k >= n) k = k - n;
+                if (k == i) break;
                 arr[j] = arr[k];
                 j = k;
                 LOGGER.info(Arrays.toString(arr));
             }
-            arr[j] =temp;
+            arr[j] = temp;
         }
         LOGGER.info(Arrays.toString(arr));
     }
 
-    /**
-     * READ HOW TO CALCULATE GCD AND WHAT IS GCD.
-     */
-    private static int getGreatestCommonDivisor(final int a , final int b){
-        if(b == 0)
-            return a;
-        else
-            return getGreatestCommonDivisor(b,a%b);
-
+    /** READ HOW TO CALCULATE GCD AND WHAT IS GCD. */
+    private static int getGreatestCommonDivisor(final int a, final int b) {
+        if (b == 0) return a;
+        else return getGreatestCommonDivisor(b, a % b);
     }
 }
