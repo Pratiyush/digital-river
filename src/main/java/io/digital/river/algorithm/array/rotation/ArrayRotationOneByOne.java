@@ -1,12 +1,12 @@
-package io.digital.river.array.rotation;
+package io.digital.river.algorithm.array.rotation;
 
 import java.util.Arrays;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Problem Statement: Given an array of integers arr[] of size N and an integer, the task is to
- * rotate the array elements to the left by d positions.
+ * Problem Statement: Given an int array arr[] of size N rotate the array by D positions to the
+ * left.
  *
  * <p>Array Rotation One By One : Solution Synopsis.
  *

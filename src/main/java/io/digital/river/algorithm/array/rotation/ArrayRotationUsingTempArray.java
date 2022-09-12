@@ -1,12 +1,12 @@
-package io.digital.river.array.rotation;
+package io.digital.river.algorithm.array.rotation;
 
 import java.util.Arrays;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Problem Statement: Given an array of integers arr[] of size N and an integer, the task is to
- * rotate the array elements to the left by d positions.
+ * Problem Statement: Given an int array arr[] of size N rotate the array by D positions to the
+ * left.
  *
  * <p>Solution Synopsis: Array Rotation using Auxiliary Array. After rotating d positions to the
  * left, the first d elements become the last d elements of the array

@@ -1,12 +1,12 @@
-package io.digital.river.array.rotation;
+package io.digital.river.algorithm.array.rotation;
 
 import java.util.Arrays;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Problem Statement: Given an array of integers arr[] of size N and an integer, the task is to
- * rotate the array elements to the left by d positions.
+ * Problem Statement: Given an int array arr[] of size N rotate the array by D positions to the
+ * left.
  *
  * <p>Array Rotation One By One : Solution Synopsis.
  *
@@ -72,21 +72,42 @@ public class ArrayRotationUsingJuggling {
     private static final Logger LOGGER = LoggerFactory.getLogger(ArrayRotationUsingJuggling.class);
 
     public static void main(final String[] args) {
-        final int arrayToBeRotated[] = {1, 2, 3, 4, 5, 6, 7};
-        final int d = 2;
-        final int n = arrayToBeRotated.length;
-        rotate(arrayToBeRotated, d, n);
+        final int arr[] = {1, 2, 3, 4, 5, 6, 7,8,9,10,11,12,13};
+        final int d = 3;
+        final int n = arr.length;
+        rotate(arr, d, n);
     }
 
-    public static void rotate(final int[] arrayToBeRotated, final int d, final int n) {
-
-        for (int i = 0; i < d; i++) {
-            int firstIndexData = arrayToBeRotated[0];
-            for (int j = 0; j < n - 1; j++) {
-                arrayToBeRotated[j] = arrayToBeRotated[j + 1];
+    public static void rotate(final int[] arr, int d, final int n) {
+        // Special Case: When d >= n
+        d = d % n;
+        int gcd  =  getGreatestCommonDivisor(d,n);
+        for (int i = 0; i < gcd; i++) {
+            int temp = arr[i];
+            int j = i;
+            while(true){
+                int k  = j + d;
+                if (k >= n)
+                    k = k - n;
+                if (k == i)
+                    break;
+                arr[j] = arr[k];
+                j = k;
+                LOGGER.info(Arrays.toString(arr));
             }
-            arrayToBeRotated[n - 1] = firstIndexData;
-            LOGGER.info(Arrays.toString(arrayToBeRotated));
+            arr[j] =temp;
         }
+        LOGGER.info(Arrays.toString(arr));
+    }
+
+    /**
+     * READ HOW TO CALCULATE GCD AND WHAT IS GCD.
+     */
+    private static int getGreatestCommonDivisor(final int a , final int b){
+        if(b == 0)
+            return a;
+        else
+            return getGreatestCommonDivisor(b,a%b);
+
     }
 }

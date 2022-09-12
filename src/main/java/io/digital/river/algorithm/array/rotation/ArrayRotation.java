@@ -1,4 +1,4 @@
-package io.digital.river.array.rotation;
+package io.digital.river.algorithm.array.rotation;
 
 import java.util.Arrays;
 import org.slf4j.Logger;
