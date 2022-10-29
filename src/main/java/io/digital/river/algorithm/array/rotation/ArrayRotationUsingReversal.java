@@ -8,7 +8,7 @@ import org.slf4j.LoggerFactory;
  * Problem Statement: Given an int array arr[] of size N rotate the array by D positions to the
  * left.
  *
- * <p>Array Rotation One By One : Solution Synopsis.
+ * <p>Array Rotation Using Reversal: Solution Synopsis.
  *
  * <p>Instead of moving one by one, divide the array into different sets where the number of sets is
  * equal to the GCD of N and d (say X. So the elements which are X distance apart are part of a set)
